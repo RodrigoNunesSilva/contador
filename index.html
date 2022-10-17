@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lula x Bolsonaro</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #img {
+            min-height: 50vh;
+        }
+        img {
+            width: 100vw;
+        }
+        #bts {
+            display: flex;
+            
+        }
+        #bts-lula {
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+            height: 10vh;
+        }
+        #espaco {
+            width: 5vw;
+        }
+        #bts-boso {
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+            height: 10vh;
+        }
+        button {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 30%;
+            font-size: 300%;
+        }
+        #numl {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            font-size: 200%;
+            font-weight: bold;
+        }
+        #numb {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            font-size: 200%;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="img">
+            <img src="lulaxbolso.png">
+        </div>
+        <div id="bts">
+            <div id="bts-lula">
+                <button onclick="maisl()">+</button>
+                <div id="numl"></div>
+                <button onclick="menosl()">-</button>
+            </div>
+            <div id="espaco"></div>
+            <div id="bts-boso">
+                <button onclick="maisb()">+</button>
+                <div id="numb"></div>
+                <button onclick="menosb()">-</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let numl = 0
+        let numb = 0
+        function maisl() {
+            numl= numl +1
+            att()
+        }
+        function menosl() {
+            numl--
+            att()
+        }
+        function maisb() {
+            numb++
+            att()
+        }
+        function menosb() {
+            numb--
+            att()
+        }
+        function att() {
+            const numlu = document.querySelector("#numl")
+            numlu.innerText = numl
+            const numbo = document.querySelector("#numb")
+            numbo.innerText = numb
+        }
+        att()
+
+    </script>
+</body>
+</html>
